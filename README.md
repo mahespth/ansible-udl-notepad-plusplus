@@ -44,3 +44,10 @@ Edit `AnsibleJobOutput_UDL.xml` and update the `ext="..."` list on the `<UserLan
 
 ```xml
 <UserLang name="Ansible Job Output" ext="ansiblelog aaplog joblog txt log" udlVersion="2.1">
+```
+
+### Dark mode is recommended
+Use Notepad++ Dark Mode / theme to make the editor black and text grey globally:
+Settings → Preferences → Dark Mode (enable)
+Then tweak: Settings → Style Configurator… → Global Styles → Default Style
+
