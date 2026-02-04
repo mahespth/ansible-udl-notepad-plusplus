@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Notepad++ Theme: ModernDark
+  Author: Steve Maher
+  Notes:
+  - Theme controls Global + built-in language styles.
+  - UDL styles are usually configured separately in userDefineLang.xml.
+-->
+<NotepadPlus>
+  <Theme name="ModernDark" defaultTheme="0">
+    <!--
+      Color format: RRGGBB (hex), NO leading #.
+      Global background: 1E1E1E
+      Global text:       D4D4D4
+      Gutter/line no:    858585
+      Caret:             AEAFAD
+      Selection:         264F78
+      Current line:      2A2A2A
+    -->
+
+    <GlobalStyles>
+      <!-- Default -->
+      <WidgetStyle name="Default Style" styleID="0"
+        fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+
+      <!-- Caret line background -->
+      <WidgetStyle name="Current line background colour" styleID="50"
+        fgColor="D4D4D4" bgColor="2A2A2A" fontName="" fontSize="0" fontStyle="0" />
+
+      <!-- Line numbers -->
+      <WidgetStyle name="Line number margin" styleID="33"
+        fgColor="858585" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+
+      <!-- Fold margin -->
+      <WidgetStyle name="Fold margin" styleID="34"
+        fgColor="858585" bgColor="1E1E1E" fontName="" fontSize="0" fontStyle="0" />
+
+      <!-- Brace highlight -->
+      <WidgetStyle name="Brace highlight style" styleID="37"
+        fgColor="FFD700" bgColor="1E1E1E" fontName="" fontSize="0" fontStyle="1" />
+      <WidgetStyle name="Bad brace colour" styleID="38"
+        fgColor="F44747" bgColor="1E1E1E" fontName="" fontSize="0" fontStyle="1" />
+
+      <!-- Selection (some versions use these) -->
+      <WidgetStyle name="Selected text colour" styleID="2"
+        fgColor="D4D4D4" bgColor="264F78" fontName="" fontSize="0" fontStyle="0" />
+      <WidgetStyle name="Caret colour" styleID="1"
+        fgColor="AEAFAD" bgColor="1E1E1E" fontName="" fontSize="0" fontStyle="0" />
+
+      <!-- Indent guide (some builds respect this) -->
+      <WidgetStyle name="Indent guide" styleID="35"
+        fgColor="404040" bgColor="1E1E1E" fontName="" fontSize="0" fontStyle="0" />
+
+      <!-- Find/mark highlight (varies by version) -->
+      <WidgetStyle name="Mark style 1" styleID="21"
+        fgColor="1E1E1E" bgColor="FFD700" fontName="" fontSize="0" fontStyle="0" />
+      <WidgetStyle name="Mark style 2" styleID="22"
+        fgColor="1E1E1E" bgColor="C586C0" fontName="" fontSize="0" fontStyle="0" />
+      <WidgetStyle name="Mark style 3" styleID="23"
+        fgColor="1E1E1E" bgColor="4EC9B0" fontName="" fontSize="0" fontStyle="0" />
+      <WidgetStyle name="Mark style 4" styleID="24"
+        fgColor="1E1E1E" bgColor="569CD6" fontName="" fontSize="0" fontStyle="0" />
+      <WidgetStyle name="Mark style 5" styleID="25"
+        fgColor="1E1E1E" bgColor="D7BA7D" fontName="" fontSize="0" fontStyle="0" />
+    </GlobalStyles>
+
+    <!-- Built-in language styles (minimal set; Notepad++ falls back to Default Style otherwise) -->
+    <LexerStyles>
+      <!-- Plain text -->
+      <LexerType name="null">
+        <WordsStyle name="DEFAULT" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+      </LexerType>
+
+      <!-- YAML (handy if you view ansible YAML) -->
+      <LexerType name="yaml">
+        <WordsStyle name="DEFAULT" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="COMMENT" styleID="1" fgColor="6A9955" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="KEY" styleID="2" fgColor="9CDCFE" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="NUMBER" styleID="3" fgColor="B5CEA8" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="STRING" styleID="4" fgColor="CE9178" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="OPERATOR" styleID="5" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+      </LexerType>
+
+      <!-- JSON -->
+      <LexerType name="json">
+        <WordsStyle name="DEFAULT" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="NUMBER" styleID="1" fgColor="B5CEA8" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="STRING" styleID="2" fgColor="CE9178" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="PROPERTYNAME" styleID="3" fgColor="9CDCFE" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="KEYWORD" styleID="4" fgColor="C586C0" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+      </LexerType>
+
+      <!-- Python (common for ops tooling) -->
+      <LexerType name="python">
+        <WordsStyle name="DEFAULT" styleID="0" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="COMMENT" styleID="1" fgColor="6A9955" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="NUMBER" styleID="2" fgColor="B5CEA8" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="STRING" styleID="3" fgColor="CE9178" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="KEYWORD" styleID="5" fgColor="C586C0" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="CLASSNAME" styleID="8" fgColor="4EC9B0" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="DEFNAME" styleID="9" fgColor="DCDCAA" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+        <WordsStyle name="OPERATOR" styleID="10" fgColor="D4D4D4" bgColor="1E1E1E" fontName="Consolas" fontSize="11" fontStyle="0" />
+      </LexerType>
+    </LexerStyles>
+  </Theme>
+</NotepadPlus>
