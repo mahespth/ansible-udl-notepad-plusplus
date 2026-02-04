@@ -66,6 +66,7 @@
         25\bskipped=[1-9]\d*\b 1
         26\brescued=[1-9]\d*\b 1
         27\bignored=[1-9]\d*\b 1
+      </Keywords>
     </KeywordLists>
     <Styles>
       <!-- Base -->
