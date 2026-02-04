@@ -49,11 +49,23 @@
         08^\[ERROR\].*$ 2
         09^\[DEPRECATION WARNING\].*$ 3
         10^PLAY RECAP.*$ 1
+        <!-- Zero counters (muted) -->
         11\bok=0\b 3
         12\bchanged=0\b 3
         13\bunreachable=0\b 3
         14\bfailed=0\b 3
-      </Keywords>
+        15\bskipped=0\b 3
+        16\brescued=0\b 3
+        17\bignored=0\b 3
+      
+        <!-- Non-zero counters (highlight) -->
+        21\bok=[1-9]\d*\b 1
+        22\bchanged=[1-9]\d*\b 1
+        23\bunreachable=[1-9]\d*\b 2
+        24\bfailed=[1-9]\d*\b 2
+        25\bskipped=[1-9]\d*\b 1
+        26\brescued=[1-9]\d*\b 1
+        27\bignored=[1-9]\d*\b 1
     </KeywordLists>
     <Styles>
       <!-- Base -->
