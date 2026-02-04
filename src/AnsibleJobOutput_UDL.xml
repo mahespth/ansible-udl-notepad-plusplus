@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<!--
+  UDL: Ansible Job Output
+  Author: Steve Maher, AIXTreme Research Ltd.
+  location: https://github.com/mahespth/ansible-udl-notepad-pluslpus
+-->
+<NotepadPlus>
+  <UserLang name="Ansible Job Output" ext="ansiblelog aaplog joblog" udlVersion="2.1">
+    <Settings>
+      <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+      <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+    </Settings>
+
+    <KeywordLists>
+      <!-- Operators (these get their own style) -->
+      <Keywords name="Operators1">| =&gt; = : , ( ) [ ] { }</Keywords>
+
+      <!-- TASK / PLAY structure -->
+      <Keywords name="Keywords1">TASK PLAY PLAYBOOK RUNNING HANDLERS META</Keywords>
+
+      <!-- Results / statuses -->
+      <Keywords name="Keywords2">ok changed skipping skipped fatal failed unreachable rescued ignored</Keywords>
+
+      <!-- Common tokens that appear in output -->
+      <Keywords name="Keywords3">included setup Gathering Facts ERROR WARNING DEPRECATION</Keywords>
+
+      <!-- PLAY RECAP counters -->
+      <Keywords name="Keywords4">PLAY RECAP ok= changed= unreachable= failed= skipped= rescued= ignored=</Keywords>
+
+      <!-- AAP / runner-ish fields (optional, but often present) -->
+      <Keywords name="Keywords5">stdout stderr msg rc traceback exception</Keywords>
+
+      <!-- Leave remaining lists empty -->
+      <Keywords name="Keywords6"></Keywords>
+      <Keywords name="Keywords7"></Keywords>
+      <Keywords name="Keywords8"></Keywords>
+
+      <!-- Delimiters: highlight the bracketed names in TASK/PLAY lines -->
+      <!-- TASK [something] -->
+      <Keywords name="Delimiters">
+        00^TASK[ ]\[[^]]*\] 1
+        01^PLAY[ ]\[[^]]*\] 1
+        02^PLAYBOOK:[ ].*$ 1
+        03^RUNNING HANDLER[ ]\[[^]]*\] 1
+        04^fatal:.*$ 2
+        05^failed:.*$ 2
+        06^unreachable:.*$ 2
+        07^\[WARNING\].*$ 3
+        08^\[ERROR\].*$ 2
+        09^\[DEPRECATION WARNING\].*$ 3
+      </Keywords>
+    </KeywordLists>
+
+    <Styles>
+      <!-- Default -->
+      <WordsStyle name="DEFAULT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+
+      <!-- Keywords1: TASK/PLAY structure -->
+      <WordsStyle name="KEYWORDS1" fgColor="2B579A" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+
+      <!-- Keywords2: statuses -->
+      <WordsStyle name="KEYWORDS2" fgColor="008272" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+
+      <!-- Keywords3: warnings/errors words -->
+      <WordsStyle name="KEYWORDS3" fgColor="A80000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+
+      <!-- Keywords4: recap counters -->
+      <WordsStyle name="KEYWORDS4" fgColor="5C2D91" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+
+      <!-- Keywords5: json-ish fields -->
+      <WordsStyle name="KEYWORDS5" fgColor="7A4F01" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+
+      <!-- Operators -->
+      <WordsStyle name="OPERATORS1" fgColor="666666" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+
+      <!-- Delimiter styles (1=structure blocks, 2=errors, 3=warnings) -->
+      <WordsStyle name="DELIMITER1" fgColor="2B579A" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+      <WordsStyle name="DELIMITER2" fgColor="A80000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+      <WordsStyle name="DELIMITER3" fgColor="B8860B" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+    </Styles>
+  </UserLang>
+</NotepadPlus>
